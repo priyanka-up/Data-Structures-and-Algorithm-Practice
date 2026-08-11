@@ -1,1 +1,32 @@
+// reverse an array in place
+public static void reverseInPlace(int[] arr) {
+    int left = 0;
+    int right = arr.length - 1;
+    
+    while (left < right) {
+        // Swap elements
+        int temp = arr[left];
+        arr[left] = arr[right];
+        arr[right] = temp;
+        
+        // Move pointers closer to the middle
+        left++;
+        right--;
+    }
+}
 
+//reverse a part of an array in place java
+public static int[] reverse(int[] arr, int low, int high)
+    {
+      while(low < high)
+      {
+        int temp =  arr[low];
+        arr[low] = arr[high];
+        arr[high] = temp;
+        low++;
+        high--;
+
+      }
+      return arr;
+
+Time Complexity: O(n) because the algorithm processes exactly n/2 iterations to handle n elements.Space Complexity: O(1) since only a single primitive variable (temp) is retained dynamically in memory.
